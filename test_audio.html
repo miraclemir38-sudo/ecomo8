@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="test()">Test</button>
+<script>
+async function test() {
+    const audioCtx = new AudioContext(); // usually 48000 or 44100
+    const start = performance.now();
+    const sr = 24000;
+    const duration = 17;
+    const buffer = audioCtx.createBuffer(1, sr * duration, sr);
+    const source = audioCtx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(audioCtx.destination);
+    source.onended = () => {
+        const end = performance.now();
+        console.log("Elapsed:", (end - start)/1000);
+        document.body.innerHTML += "<br>Elapsed: " + ((end - start)/1000) + " seconds";
+    };
+    source.start();
+}
+</script>
+</body>
+</html>

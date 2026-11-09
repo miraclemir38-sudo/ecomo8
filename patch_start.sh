@@ -1,0 +1,1 @@
+sed -i 's/source.start(audioCtx.currentTime + AUDIO_DELAY_SEC);/source.start(audioCtx.currentTime + AUDIO_DELAY_SEC);\n            if (videoSource) videoSource.start(audioCtx.currentTime + AUDIO_DELAY_SEC);/' components/VideoProductionPanel.tsx

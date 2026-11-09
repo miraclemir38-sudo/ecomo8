@@ -1,0 +1,10 @@
+                  />
+                </div>
+              ) : (
+                <div className="flex-1 min-h-0 flex flex-col animate-in fade-in slide-in-from-left-4 duration-300">
+                  <MarketingPanel 
+                    scriptContent={generatedScript || ""}
+                    marketingKit={marketingKit}
+                    setMarketingKit={setMarketingKit}
+                  />
+                </div>

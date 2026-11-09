@@ -1,0 +1,7 @@
+{
+  "name": "EcoMo8",
+  "description": "A professional YouTube script generator for economy and investment channels, powered by Gemini AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
